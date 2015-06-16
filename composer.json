@@ -1,0 +1,20 @@
+{
+    "name": "apollo13/code-check",
+    "description": "Standard way, how to check code quality of the Apollo13 projects",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Bohdan Kolecek",
+            "email": "bohdan.kolecek@apollo13.cz"
+        },
+        {
+            "name": "Pavel Zelezny",
+            "email": "pavel.zelezny@apollo13.cz"
+        }
+    ],
+    "bin": [
+        "bin/code-check",
+        "bin/code-check-pre-push"
+    ]
+}

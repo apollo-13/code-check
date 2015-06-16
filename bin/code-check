@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+trap catch_errors ERR;
+
+# This function will catch error of all executed script and propagate it
+function catch_errors()
+{
+    local error_code="$?"
+    exit "$error_code"
+}
+
+SOURCE_DIR=${1:-src}
+PROJECT_ROOT_DIR=$(git rev-parse --git-dir)/..
+cd "$PROJECT_ROOT_DIR"
+COMPOSER_BIN_DIR=$(composer config bin-dir)
