@@ -13,6 +13,9 @@
             "email": "pavel.zelezny@apollo13.cz"
         }
     ],
+    "require": {
+        "phpunit/phpunit": "4.7.*"
+    },
     "bin": [
         "bin/code-check",
         "bin/code-check-pre-push"

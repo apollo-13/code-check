@@ -13,3 +13,7 @@ SOURCE_DIR=${1:-src}
 PROJECT_ROOT_DIR=$(git rev-parse --git-dir)/..
 cd "$PROJECT_ROOT_DIR"
 COMPOSER_BIN_DIR=$(composer config bin-dir)
+
+printf "Running PHPUnit check\n"
+$COMPOSER_BIN_DIR/phpunit --colors --configuration tests/configuration.xml tests/
+printf "\n"
