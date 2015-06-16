@@ -15,6 +15,7 @@
     ],
     "require": {
         "phpunit/phpunit": "4.7.*",
+        "squizlabs/php_codesniffer": "^2.3",
         "phpmd/phpmd": "^2.2"
     },
     "bin": [
