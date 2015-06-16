@@ -18,6 +18,10 @@ printf "Running PHP Code sniffer\n"
 phpcs --standard=PSR2 --extensions=php --encoding=UTF-8 $SOURCE_DIR
 printf "\n"
 
+printf "Running PHP Coding standard fixer\n"
+php-cs-fixer fix $SOURCE_DIR --level=psr2 --config=default --verbose --dry-run --ansi --no-interaction
+printf "\n"
+
 printf "Running PHP Mess Detector\n"
 phpmd $SOURCE_DIR xml unusedcode --suffixes php || true
 printf "\n"
